@@ -25,6 +25,10 @@ class SinglyLinkedList {
         return this;
     }
 
+    pop() {
+    
+    }
+
 }
 let list = new SinglyLinkedList()
 list.push("Hello")
