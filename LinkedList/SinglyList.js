@@ -78,6 +78,23 @@ class SinglyLinkedList {
     }
 
 
+    insert(index, val) {
+        if (index < 0 || index > this.length) return false;
+        if (index === this.length) return this.push(val);
+        if (index === 0) return this.unshift(val);
+        else {
+            let firstNode = this.get(index-1)
+            let newMiddleNode = new Node(val)
+            let lastNode = firstNode.next
+            firstNode.next = newMiddleNode
+            newMiddleNode.next = lastNode
+        }
+        this.length++
+        return true
+
+    }
+
+
 
 }
 let list = new SinglyLinkedList()
