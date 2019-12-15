@@ -44,6 +44,19 @@ class SinglyLinkedList {
         return current;
 
     }
+    shift() {
+        if (!this.head)
+            return undefined;
+        let headToBeRemoved = this.head;
+        this.head = headToBeRemoved.next;
+        this.length--;
+        if (this.length === 0) {
+            this.tail = null;
+        }
+
+        return headToBeRemoved
+    }
+
 
 }
 let list = new SinglyLinkedList()
