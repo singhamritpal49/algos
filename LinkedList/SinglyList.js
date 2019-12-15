@@ -103,21 +103,7 @@ class SinglyLinkedList {
         this.length--;
         return removed;
     }
-    // reverse() {
-    //     let currentNode = this.head;
-    //     this.head = this.tail;
-    //     this.tail = currentNode;
-    //     let prev = null;
-    //     let next;
-    // for(let i = 0;i < this.length; i++) {
-    //      next = currentNode.next;
-    //      currentNode.next = prev;
-    //      prev = currentNode;
-    //      currentNode = next
-    // }
-    // return this;
-
-    // }
+    
     reverse() {
         let currentNode = this.head;
         this.head = this.tail;
