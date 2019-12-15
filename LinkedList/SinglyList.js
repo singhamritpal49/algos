@@ -57,6 +57,20 @@ class SinglyLinkedList {
         return headToBeRemoved
     }
 
+    get(index) {
+        if (index < 0 || index >= this.length) {
+            return null;
+        }
+        let temp = this.head
+         for(let i = 0 ; i < index; i++) {
+             temp = temp.next
+         }
+        return temp;
+    }
+
+   
+
+
 
 }
 let list = new SinglyLinkedList()
