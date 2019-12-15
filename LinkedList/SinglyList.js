@@ -62,13 +62,13 @@ class SinglyLinkedList {
             return null;
         }
         let temp = this.head
-         for(let i = 0 ; i < index; i++) {
-             temp = temp.next
-         }
+        for (let i = 0; i < index; i++) {
+            temp = temp.next
+        }
         return temp;
     }
 
-    set(index,val) {
+    set(index, val) {
         let foundNode = this.get(index);
         if (foundNode) {
             foundNode.val = val;
@@ -83,7 +83,7 @@ class SinglyLinkedList {
         if (index === this.length) return this.push(val);
         if (index === 0) return this.unshift(val);
         else {
-            let firstNode = this.get(index-1)
+            let firstNode = this.get(index - 1)
             let newMiddleNode = new Node(val)
             let lastNode = firstNode.next
             firstNode.next = newMiddleNode
@@ -92,6 +92,16 @@ class SinglyLinkedList {
         this.length++
         return true
 
+    }
+    remove(index) {
+        if (index < 0 || index > this.length) return undefined;
+        if (index === this.length - 1) return this.pop();
+        if (index === 0) return this.shift();
+        let firstNode = this.get(index - 1);
+        let removed = firstNode.next
+        firstNode.next = removed.next
+        this.length--;
+        return removed;
     }
 
 
