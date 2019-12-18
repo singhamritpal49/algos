@@ -70,8 +70,32 @@ class DoublyLinkedList {
         this.length++
         return this
     }
- 
+    //     get(index) {
+    //         if (index < 0 || index >= this.length)
+    //             return null;
+    //         if (index <= this.length / 2) {
+    //             console.log("Working from HEAD")
+    //             let count = 0;
+    //             let temp = this.head;
+    //             while (count != index) {
+    //                 temp = temp.next;
+    //                 count++;
+    //             }
+    //             return temp
+    //         } else {
+    //             console.log("Working from TAIL")
+    //             let count = this.length - 1;
+    //             let temp = this.tail;
+    //             while (count != index) {
+    //                 temp = temp.prev
+    //                 count --;
+    //             }
+    //             return temp
+    //         } 
 
+    //     }
+
+// another way
 
     get(index) {
         if (index < 0 || index >= this.length)
