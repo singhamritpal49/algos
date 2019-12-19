@@ -23,4 +23,16 @@ class Queue {
         this.size++
         return this
     }
+    dequeue() {
+        if (!this.first)
+            return null;
+        let currentList = this.first;
+        if (this.first === this.last) {
+            this.last = null;
+        }
+        this.first = this.first.next
+        this.size--;
+        return currentList.value
+
+    }
 }
