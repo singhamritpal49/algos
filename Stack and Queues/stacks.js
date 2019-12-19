@@ -11,4 +11,18 @@ class Stack {
         this.last = null;
         this.size = 0;
     }
+    push(val) {
+        let newNode = new Node(val);
+        if (!this.first) {
+            this.first = newNode;
+            this.last = newNode;
+        } else {
+            let oldFirst = this.first;
+            this.first = newNode;
+            this.first.next = oldFirst;
+        }
+        this.size++;
+        return this
+    }
+
 }
