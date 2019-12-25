@@ -62,6 +62,9 @@ class BinarySearchTree {
             }
         }
     }
+    remove(value) {
+
+    }
 
 }
 
