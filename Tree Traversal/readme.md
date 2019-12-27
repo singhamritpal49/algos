@@ -1,6 +1,5 @@
 # TREE TRAVERSAL
 
-# TRAVERSING A TREE
  #### Two ways:
 - Breadth-first Search
 - Depth-first Search
