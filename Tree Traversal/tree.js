@@ -82,7 +82,6 @@ class Tree {
     }
     DFSPreOrder() {
         let data = [];
-//         let currentNode = this.root;
         function traverse(node) {
             data.push(node.value);
             if (node.left) traverse(node.left);
@@ -104,5 +103,6 @@ tree.insert(3);
 tree.insert(8);
 tree.insert(20);
 tree.BFS();
+
     
 
