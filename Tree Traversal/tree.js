@@ -81,6 +81,7 @@ class Tree {
         return data
     }
     DFSPreOrder() {
+        //LRN   Node --> Left --> Right 
         let data = [];
         function traverse(node) {
             data.push(node.value);
@@ -89,9 +90,23 @@ class Tree {
         }
         traverse(this.root)
         return data;
-
-
     }
+    DFSPostOrder() {
+        //LRN  Left --> Right --> Node
+        let data = [];
+
+        function postTraverse(node) {
+            if (node.left)
+                postTraverse(node.left);
+            if (node.right)
+                postTraverse(node.right);
+            data.push(node.value)
+
+        }
+        postTraverse(this.root);
+        return data;
+    }
+    
 }
 
 
