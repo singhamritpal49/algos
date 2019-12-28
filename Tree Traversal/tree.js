@@ -106,7 +106,19 @@ class Tree {
         postTraverse(this.root);
         return data;
     }
-    
+    DFSInOrder() {
+        //LNR  Left --> Node --> Right
+        let data = [];
+        function inTraverse(node) {
+            if (node.left)
+                inTraverse(node.left);
+            data.push(node.value)
+            if (node.right)
+                inTraverse(node.right);
+        }
+        inTraverse(this.root);
+        return data;
+    }
 }
 
 
