@@ -14,24 +14,24 @@ function common_element(array1, array2) {
     }
 
     return result;
-    // function common_elements(a,b) {
-    //     let result = {}
-    //     for(let i = 0; i < a.length; i ++) {
-    //         result[a[i]] = (result[a[i]] || 0) + 1
-    //     }
-    //     for(let i = 0; i < b.length; i ++) {
-    //         result[b[i]] = (result[b[i]] || 0) + 1
-    //     }
+    function common_elements(a,b) {
+        let result = {}
+        for(let i = 0; i < a.length; i ++) {
+            result[a[i]] = (result[a[i]] || 0) + 1
+        }
+        for(let i = 0; i < b.length; i ++) {
+            result[b[i]] = (result[b[i]] || 0) + 1
+        }
     
-    //     let array = []
-    //     for(let keys in result) {
-    //         if (result[[keys]] > 1) {
-    //             array.push(keys)
-    //         }
-    //     }
-    //     return array
+        let array = []
+        for(let keys in result) {
+            if (result[[keys]] > 1) {
+                array.push(keys)
+            }
+        }
+        return array
     
-    // }
+    }
 
 
 
