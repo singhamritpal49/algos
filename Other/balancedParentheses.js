@@ -1,5 +1,7 @@
 function balance(string) {
 
+    // WHEN  MISSING ANY right or left Parentheses  () () ) ()
+    // Find how many Parentheses needed to complete the pair
     let hash = {};
     for(let i = 0; i < string.length; i++) {
         hash[string[i]] = (hash[string[i]] || 0) + 1
