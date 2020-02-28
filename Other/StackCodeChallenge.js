@@ -26,6 +26,10 @@ class Stack {
       }
       return this.stack
     }
+
+
+
+
   }
   let stack = new Stack()
   stack.push(4)
@@ -40,4 +44,29 @@ class Stack {
   //10
   //8
   
-  
+  // Operation is an of ops
+function superStack(operation) {
+  let stack = new Stack()
+  operationsplice(1,0) 
+  for(let op of operation) {
+    if(op.substring(0,3), "pop") {
+      stack.pop()
+      stack.peek()
+    }
+    else if (op.substring(0,4) === 'push') {
+      stack.push(parseInt(op.substring(5)))
+      stack.peek()
+    }
+    else if (op.substring(0,3) === "inc"){
+      let spaceIndex = op.indexOf(" ")
+      let secondPart = op.substring(spaceIndex+1);
+      let secondSpace = secondPart.indexOf(" ")+ 2 + spaceIndex
+
+      let fArg = parseInt(op.substring(spaceIndex+1, secondSpace))
+      let sArg = parseInt(op.substring(secondSpace))
+      stack.increment(fArg,sArg)
+      stack.peek()
+    }
+    else return 
+  }
+}
