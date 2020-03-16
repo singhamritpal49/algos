@@ -3,11 +3,26 @@
 // domainName("http://github.com/carbonfive/raygun") == "github" 
 // domainName("http://www.zombie-bites.com") == "zombie-bites"
 // domainName("https://www.cnet.com") == "cnet"
+function domainName(url) {
 
-
-function domainName(url){
-    //your code here
+  let name = url.split('.');
+  console.log(name)
+  for (let i = 0; i < name.length; i++) {
+      if (name[i] === "http://www") {
+          return name[i + 1]
+      }
+      if (name[i] === "www") {
+          return name[i + 1]
+      }
+      if (name[i] = "https://") {
+//             let value = name[i + 2].split('.')
+//             return value
+          return name[i+1]
+      }
   }
+
+}
+
 
 //   Test.assertEquals(domainName("http://google.com"), "google");
 // Test.assertEquals(domainName("http://google.co.jp"), "google");
