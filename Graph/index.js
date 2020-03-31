@@ -18,6 +18,8 @@ class Graph {
             v => v !== vertex1
         );
     }
+    removeVertex(vertex){
+    }
 
 }
 g = new Graph();
