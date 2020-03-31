@@ -10,6 +10,9 @@ class Graph {
         this.adjacencyList[vertex1].push(vertex2);
         this.adjacencyList[vertex2].push(vertex1);
     }
+    removeEdge(vertex1, vertex2) {
+        
+    }
 
 }
 g = new Graph();
