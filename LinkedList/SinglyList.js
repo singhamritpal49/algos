@@ -137,3 +137,23 @@ class SinglyLinkedList {
 }
 let list = new SinglyLinkedList()
 list.push("Hello")
+
+// Combining 2 Sorted LinkedList
+function combine(l1,l2){
+    let c1 = l1;
+    let c2 = l2;
+
+    let l3 = new Node(null);
+    let head = l3;
+    while(c1 || c2 ) {
+        if(c1 && (!c2 || (c1.val <= c2.val))) {
+            l3.next = c1;
+            c1 = c1.next;
+        } else {
+            l3.next = c2;
+            c2 = c2.next;
+        }
+        l3 = l3.next;
+    }
+    return head.next;
+}
