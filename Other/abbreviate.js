@@ -23,7 +23,7 @@ function abbreviate(word) {
     let count = 0;
     if (word.length < 4)
         return word;
-        array = word.split('')
+    array = word.split('')
     for (let i = 0; i < array.length; i++) {
         if (i === 0) {
             first = array[i];
