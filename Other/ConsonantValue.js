@@ -11,13 +11,6 @@
 // -- The consonant substrings are: "str" and "ngth" with values "str" = 19 + 20 + 18 = 57 and "ngth" = 14 + 7 + 20 + 8 = 49. The highest is 57.
 // For C: do not mutate input.
 
-
-
-
-
-
-
-
 function solve(string) {
     let count = 0
     for(let i = 0; i < string.length; i++) {
