@@ -11,3 +11,16 @@
 // Optimize for runtime over memory
 
 
+function canTwoMoviesFillFlight(movieLengths, flightLength) {
+    let moviesMap = {};
+  for(let i = 0; i < movieLengths.length;i++) {
+    let firstMovie = movieLengths[i];
+    let diff = flightLength - firstMovie
+    if(moviesMap.hasOwnProperty(diff)) {
+      return true
+    }
+    moviesMap[movieLengths] = i
+  }
+ 
+return false;
+}
