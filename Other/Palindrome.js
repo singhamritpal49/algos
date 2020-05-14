@@ -13,17 +13,12 @@
 function isPalindrome(line) {
     let newLine = line.toString().split('');
     let length = newLine.length-1;
-    let result = true;
     for (let i = 0; i < newLine.length; i++) {
-            if(newLine[i] === newLine[length]) {
-                
-                result = true
-            }
             if(newLine[i] != newLine[length]) {
-                result = false
+                return false
             }
             length--
      }
-return result;
+return true;
 }
 
