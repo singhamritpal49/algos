@@ -19,5 +19,16 @@
 // Else (x is smaller) recur for the left half.
 
 function binarySearch(array,item) {
-    
+    //     [1,2,3,5,6,9,12,19]
+    //      l       m       r
+            let leftIndex = 0;
+            let rightIndex = array.length -1;
+           while(leftIndex <= rightIndex) {
+               let midPointIndex = Math.floor((leftIndex+rightIndex)/2)
+               let midPointValue = array[midPointIndex];
+               if(item === midPointValue) return midPointIndex;
+               else if(item < midPointValue) rightIndex = midPointIndex - 1;
+               else leftIndex = midPointIndex + 1;
+           }
+           return -1;
     }
